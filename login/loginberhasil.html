@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Halaman Login</h1>
+  <form onsubmit="return login()">
+    <label for="username">User Name</label>
+    <input type="text" name="username" id="username" required />
+    <br /><br />
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required />
+    <br><br>
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function login() {
+      let user = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      // Use strict equality (===) for comparison
+      if (user === "zulfanafandi" && password === "panzule01") {
+        alert("Login Berhasil");
+        return true; // Allow the form submission
+      } else {
+        alert("Login Gagal");
+        return false; // Prevent the form submission
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        h1{
+            text-align: center;
+        }
+        select{
+            background-color:blue;
+            color: black;
+        }
+        .container{
+            display: flex ;justify-content: center;
+        }
+    </style>
+    
+    <script>
+        function image_picker(){
+            const list_gambar = ["","monyet.jpg","singa.jpg","oranghutan.jpeg"];
+            let pilihan = document.getElementById("option").value ;
+
+            if(pilihan =="bison"){
+                let select = list_gambar[0]
+                document.getElementById("gambar").src = img/${select};
+            }
+            if(pilihan =="monyet"){
+                let select = list_gambar[1]
+                document.getElementById("gambar").src = img/${select};
+            }
+            if(pilihan =="singa"){
+                let select = list_gambar[2]
+                document.getElementById("gambar").src = img/${select};
+            }
+            if(pilihan =="oranghutan"){
+                let select = list_gambar[3]
+                document.getElementById("gambar").src = img/${select};
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="harimau">Harimau</option>
+        <option value="beruang">Beruang</option>
+        <option value="singa">Singa</option>
+        <option value="macan">Macan</option>
+        <option value="banteng">Banteng</option>
+        <option value="serigala">Serigala</option>
+
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="500px">
+    </div>
+</body>
+</html>
